@@ -2,8 +2,10 @@
  * @author monkeywang
  * Date: 17/6/12
  */
-import {isInArray} from './functions/isInArray'
+import {containsArray} from './functions/containsArray'
+import {uniqueArray} from './functions/uniqueArray'
 let arrayExtend = {
-  isInArray
+  containsArray,
+  uniqueArray
 }
 export default arrayExtend
