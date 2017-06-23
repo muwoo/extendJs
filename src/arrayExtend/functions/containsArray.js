@@ -4,6 +4,18 @@
  * @param array 数组
  * @param i 从第i个下标开始 默认为 0
  * @returns {*} 如果存在 返回数组下标 不存在则返回 -1
+ * @example
+ * 数组元素本身是个对象：
+ * var a = [{q: 1}, {b: 2}]
+ * a[100] = {s: 3}
+ * var d = {s: 3}
+ * a.contains(d) // => 100
+ *
+ * 数组元素为Number,String:
+ * var a = [1, 2]
+ * a[100] = 3
+ * var d = 3
+ * a.contains(d) // => 100
  */
 export function containsArray (elem, i) {
   let indexOf = Array.prototype.indexOf

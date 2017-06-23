@@ -1,6 +1,11 @@
 /**
  * @author monkeywang
- * Date: 17/6/21
+ * @example
+ * var a = [{q: 1}, {b: 2}, {q:1}, {c:3}]
+ * var b = [1,2,2,3,4,5,5]
+ * a[100] = {s: 3}
+ * a.uniqueArray() // => [{q: 1}, {b: 2}]
+ * b.uniqueArray() // => [1,2,3,4,5]
  */
 import {containsArray} from './containsArray'
 export function uniqueArray () {
