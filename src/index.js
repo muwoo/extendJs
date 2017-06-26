@@ -3,8 +3,10 @@
  * Date: 17/6/11
  */
 import arrayExtend from './arrayExtend/index'
+import fnExtend from './functionExtend/index'
 let extendJs = {
-  arrayExtend
+  arrayExtend,
+  fnExtend
 }
 /**
  * 数组属性扩展
@@ -18,6 +20,13 @@ let extendArray = function (funcs) {
     }
   }
 }
+let extendFn = function (funcs) {
+  for (let func in funcs) {
+    if (funcs.hasOwnProperty(func)) {
+      Function.prototype[func] = funcs[func]
+    }
+  }
+}
 /**
  * 遍历 extendJs 写入相应扩展
  */
@@ -27,6 +36,8 @@ for (let ObjExtend in extendJs) {
       case 'arrayExtend':
         extendArray(arrayExtend)
         break
+      case 'fnExtend':
+        extendFn(fnExtend)
     }
   }
 }

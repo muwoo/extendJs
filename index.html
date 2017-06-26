@@ -9,9 +9,9 @@
 </body>
 <script src="./lib/_extendJs.js"></script>
 <script>
-  var a = [{q: 1}, {b: 2},{q:1},{c:3}]
-  a[100] = {s: 3}
-  var b = [1,2,2,3,4,5,5]
-  console.log(a.uniqueArray())
+  var test = function (e) {
+    console.log(e)
+  }
+  window.onresize = test.throttle(1000, 5000)
 </script>
 </html>
