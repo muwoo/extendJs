@@ -9,9 +9,10 @@
 </body>
 <script src="./lib/_extendJs.js"></script>
 <script>
-  var test = function (e) {
-    console.log(e)
-  }
-  window.onresize = test.throttle(1000, 5000)
+  // Array.prototype = Object.assign(Array.prototype, extendJs.ayExtend)
+
+  var a = [1,2,2,3,4,5,5,5]
+  console.log(extendJs.ayExtend.uniqueArray.apply(a))
+  // console.log(a.uniqueArray())
 </script>
 </html>

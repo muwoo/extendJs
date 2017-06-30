@@ -15,7 +15,7 @@ export function throttle (delay, atleast) {
   return () => {
     let now = +new Date()
     let args = arguments
-    previous = previous ? previous : now
+    previous = previous || now
     if (atleast && now - previous > atleast) {
       this()
       previous = now

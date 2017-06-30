@@ -2,44 +2,13 @@
  * @author monkeywang
  * Date: 17/6/11
  */
-import arrayExtend from './arrayExtend/index'
+import ayExtend from './arrayExtend/index'
 import fnExtend from './functionExtend/index'
 let extendJs = {
-  arrayExtend,
+  ayExtend,
   fnExtend
 }
-/**
- * 数组属性扩展
- * @param funcs
- */
-let extendArray = function (funcs) {
-  for (let func in funcs) {
-    if (funcs.hasOwnProperty(func)) {
-      console.log(func)
-      Array.prototype[func] = funcs[func]
-    }
-  }
-}
-let extendFn = function (funcs) {
-  for (let func in funcs) {
-    if (funcs.hasOwnProperty(func)) {
-      Function.prototype[func] = funcs[func]
-    }
-  }
-}
-/**
- * 遍历 extendJs 写入相应扩展
- */
-for (let ObjExtend in extendJs) {
-  if (extendJs.hasOwnProperty(ObjExtend)) {
-    switch (ObjExtend) {
-      case 'arrayExtend':
-        extendArray(arrayExtend)
-        break
-      case 'fnExtend':
-        extendFn(fnExtend)
-    }
-  }
-}
+
+window.extendJs = window._ = extendJs
 
 export default extendJs
