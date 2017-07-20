@@ -4,10 +4,7 @@
  */
 import ayExtend from './arrayExtend/index'
 import fnExtend from './functionExtend/index'
-let extendJs = {
-  ayExtend,
-  fnExtend
-}
+let extendJs = Object.assign({}, ayExtend, fnExtend)
 
 window.extendJs = window._ = extendJs
 

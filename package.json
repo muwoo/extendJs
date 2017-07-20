@@ -1,12 +1,13 @@
 {
-  "name": "jsextend",
-  "version": "1.0.0",
+  "name": "extend_js",
+  "version": "0.0.2",
   "description": "to extend js Object functions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch"
   },
+  "entryPoint": "./src/index.js",
   "keywords": [
     "javascript"
   ],
