@@ -1,6 +1,6 @@
 {
   "name": "extend_js",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "to extend js Object functions",
   "main": "index.js",
   "scripts": {

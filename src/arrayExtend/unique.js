@@ -12,7 +12,7 @@ import {contains} from './contains'
 export function unique (array) {
   let newArray = []
   array.forEach(function (item) {
-    if (contains.call(newArray, item) === -1) {
+    if (contains(newArray, item) === -1) {
       newArray.push(item)
     }
   })
