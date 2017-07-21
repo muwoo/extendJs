@@ -46,5 +46,5 @@ import 'extend_js'
 ```
 #### 4.日期转换
 ```javascript
-   _.formatDate(new Date(), 'yyyy-MM-dd hh:mm:ss')
+   _.formatDate(new Date(), 'yyyy-MM-dd hh:mm:ss') // => 2017-07-21 17:03:58
 ```
