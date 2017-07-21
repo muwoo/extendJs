@@ -1,9 +1,7 @@
 # extendJs
 扩展 JavaScript 的方法库
-<p align="center">
-  
-  <a href="https://www.npmjs.com/package/extend_js"><img src="https://img.shields.io/badge/npm-v0.0.6-brightgreen.svg" alt="License"></a>
-</p>
+###### [![image](https://img.shields.io/badge/npm-v0.0.6-brightgreen.svg)](https://www.npmjs.com/package/extend_js) 
+
 ## 使用方法
 #### 1. npm 引用
 ```bash
