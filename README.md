@@ -32,3 +32,15 @@ import 'extend_js'
  var a = [1,2,2,3,4,5,5,5]
  _.unique(a) // => [1,2,3,4,5]
 ```
+
+#### 3.函数节流
+```javascript
+   var resize = function () {
+     console.log('resize')
+   }
+   window.onresize = _.throttle(resize, 2000, 5000)
+```
+#### 4.日期转换
+```javascript
+   _.formatDate(new Date(), 'yyyy-MM-dd hh:mm:ss')
+```
