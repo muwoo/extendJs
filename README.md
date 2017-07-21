@@ -27,7 +27,7 @@ import 'extend_js'
  var d = 2
  _.contains(a, d) // => 1
 ```
-#### 2.按需加载，判断数组内是否存在某个元素
+#### 2.判断数组内是否存在某个元素
 ```javascript
  var a = [{q: 1}, {b: 2}]
  a[100] = {s: 3}
