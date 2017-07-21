@@ -1,5 +1,6 @@
 # extendJs
 扩展 JavaScript 的方法库
+详细文档[extend_js](https://monkeywangs.gitbooks.io/extend_js/content/)
 ###### [![image](https://img.shields.io/badge/npm-v0.0.6-brightgreen.svg)](https://www.npmjs.com/package/extend_js) 
 
 ## 使用方法
