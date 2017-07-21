@@ -27,10 +27,8 @@ import 'extend_js'
  var d = 2
  _.contains(a, d) // => 1
 ```
-#### 2.判断数组内是否存在某个元素
+#### 2.数组去重
 ```javascript
- var a = [{q: 1}, {b: 2}]
- a[100] = {s: 3}
- var d = {s: 3}
- _.contains(a, d)
+ var a = [1,2,2,3,4,5,5,5]
+ _.unique(a) // => [1,2,3,4,5]
 ```
