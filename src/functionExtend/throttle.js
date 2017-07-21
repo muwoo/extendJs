@@ -7,9 +7,9 @@
  *   console.log('resize')
  * }
  *
- * window.onresize = resize.throttle(2000, 5000)
+ * window.onresize = throttle(resize, 2000, 5000)
  */
-export function throttle (delay, atleast) {
+export function throttle (fn, delay, atleast) {
   let timer = null
   let previous = null
   return () => {
@@ -17,13 +17,13 @@ export function throttle (delay, atleast) {
     let args = arguments
     previous = previous || now
     if (atleast && now - previous > atleast) {
-      this()
+      fn()
       previous = now
       clearTimeout(timer)
     } else {
       clearTimeout(timer)
       timer = setTimeout(() => {
-        this.apply(this, args)
+        fn.apply(fn, args)
         previous = null
       }, delay)
     }

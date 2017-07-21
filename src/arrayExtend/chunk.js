@@ -10,9 +10,9 @@
  * // => [['a', 'b', 'c'], ['d']]
  *
  */
-export function chunkArray (size) {
+export function chunk (array, size) {
   size = Math.max(size, 0)
-  const length = this === null ? 0 : this.length
+  const length = array === null ? 0 : array.length
   if (!length || size < 1) {
     return []
   }
@@ -21,7 +21,7 @@ export function chunkArray (size) {
   const result = new Array(Math.ceil(length / size))
 
   while (index < length) {
-    result[resIndex++] = this.slice(index, (index += size))
+    result[resIndex++] = array.slice(index, (index += size))
   }
   return result
 }

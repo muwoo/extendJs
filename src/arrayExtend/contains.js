@@ -9,21 +9,21 @@
  * var a = [{q: 1}, {b: 2}]
  * a[100] = {s: 3}
  * var d = {s: 3}
- * a.contains(d) // => 100
+ * contains(a, d) // => 100
  *
  * 数组元素为Number,String:
  * var a = [1, 2]
  * a[100] = 3
  * var d = 3
- * a.contains(d) // => 100
+ * contains(a, d) // => 100
  */
-export function containsArray (elem, i) {
+export function contains (array, elem, i) {
   let indexOf = Array.prototype.indexOf
   /**
    * 如果有indexOf 方法则用改方法返回，核心为indexOf方法
    */
-  if (indexOf && this.indexOf(elem) !== -1) {
-    return this.indexOf(elem)
+  if (indexOf && array.indexOf(elem) !== -1) {
+    return array.indexOf(elem)
   } else {
     /**
      * 注意该条语句是给i赋值用的，猛的一看该语句可能产生混淆
@@ -32,13 +32,13 @@ export function containsArray (elem, i) {
      * 如果i 为负数，加上则为其加上数组长度，且其值不能小于0
      * @type {number}
      */
-    i = i ? i < 0 ? Math.max(0, this.length + i) : i : 0
-    for (; i < this.length; i++) {
+    i = i ? i < 0 ? Math.max(0, array.length + i) : i : 0
+    for (; i < array.length; i++) {
       /**
        * 这里 i in array 这么判断主要是考虑数组下标不连续的情况注意学习这种方式 比如稀疏数组
        * JSON.stringify() 为了适用对象数组 [{},{}]
        */
-      if (i in this && JSON.stringify(this[i]) === JSON.stringify(elem)) {
+      if (i in array && JSON.stringify(array[i]) === JSON.stringify(elem)) {
         return i
       }
     }

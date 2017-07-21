@@ -12,7 +12,7 @@ const config = {
     index: './src/index.js'
   },
   output: {
-    filename: '_extendJs.js',
+    filename: 'extend_js.js',
     path: resolve('lib')
   },
   module: {
